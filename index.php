@@ -20,9 +20,9 @@
 
       <form class="form-signin">
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
 
         <a class="btn btn-lg btn-primary btn-block" href="home.html" type="submit">Entrar</a>
       </form>
