@@ -41,5 +41,13 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Bem vindo</h1>
+        <p>Clique no menu acima para verificar as salas disponiveis
+        e agendar a sua.</p>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -24,7 +24,7 @@
         <label for="inputPassword" class="sr-only">Senha</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
 
-        <a class="btn btn-lg btn-primary btn-block" href="home.html" type="submit">Entrar</a>
+        <a class="btn btn-lg btn-primary btn-block" href="home.php" type="submit">Entrar</a>
       </form>
 
     </div> <!-- /container -->
