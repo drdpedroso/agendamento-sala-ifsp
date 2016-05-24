@@ -11,8 +11,8 @@
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.min.js"></script>
 
-    <script src="js/jquery-ui.min.js"></script>
 
+    <script src="js/jquery-ui.min.js"></script>
   </head>
 
   <body>
@@ -43,11 +43,7 @@
     </nav>
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Bem vindo</h1>
-        <p>Clique no menu acima para verificar as salas disponiveis
-        e agendar a sua.</p>
-      </div>
+
     </div>
 
   </body>
