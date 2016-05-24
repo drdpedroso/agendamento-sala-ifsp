@@ -1,0 +1,5 @@
+== Criar agenda de compromissos usando Rails
+
+Uma forma muito legal de agregar uma agenda de compromissos ou eventos no seu projeto é utilizando um calendário. No Ruby on Rails é muito simples fazer isso com a ajuda da gem table_builder.
+
+Tutorial: http://mealine.github.io/criar-calendario-ruby.html
