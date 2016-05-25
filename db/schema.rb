@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609202119) do
+ActiveRecord::Schema.define(version: 20160524211016) do
 
   create_table "compromissos", force: true do |t|
     t.string   "titulo"
     t.text     "texto"
     t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "nome"
+    t.text     "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
