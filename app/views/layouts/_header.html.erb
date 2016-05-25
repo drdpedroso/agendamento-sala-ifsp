@@ -1,4 +1,4 @@
-
+<% if logged_in? %>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,8 +19,10 @@
         <li><a href="#">Meus agendamentos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Logout</a></li>
+        <li><%= link_to "Logout",logout_path %></li>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<% end %>
