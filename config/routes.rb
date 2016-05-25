@@ -5,8 +5,10 @@ AgendaDeCompromissos::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'compromissos#index'
-
+  root 'login#new'
+  get '/login', to: "login#new"
+  post '/login', to: "login#create"
+  get '/logout',to: "login#destroy"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
