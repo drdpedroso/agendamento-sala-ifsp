@@ -11,8 +11,8 @@
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.min.js"></script>
 
-    <script src="js/jquery-ui.min.js"></script>
 
+    <script src="js/jquery-ui.min.js"></script>
   </head>
 
   <body>
@@ -32,11 +32,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-<<<<<<< HEAD:app/home.html.erb
-            <li><a href="agendar-sala.html">Agendar Sala</a></li>
-=======
             <li><a href="agendar-sala.php">Agendar Sala</a></li>
->>>>>>> master:home.php
             <li><a href="#">Meus agendamentos</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -47,11 +43,7 @@
     </nav>
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Bem vindo</h1>
-        <p>Clique no menu acima para verificar as salas disponiveis
-        e agendar a sua.</p>
-      </div>
+
     </div>
 
   </body>

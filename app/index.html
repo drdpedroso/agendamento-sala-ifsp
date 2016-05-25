@@ -10,6 +10,9 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 
 
   </head>
