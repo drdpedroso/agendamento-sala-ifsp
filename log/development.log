@@ -1757,3 +1757,114 @@ Processing by LoginController#new as HTML
   Rendered login/new.html.erb within layouts/application (1.0ms)
   Rendered layouts/_header.html.erb (0.4ms)
 Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ssIZJmWEk6zEbQ3JPPlYFOAh2fGS1N8lI3I5Mx75LQ=", "email"=>"email@email.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'email@email.com' LIMIT 1
+  Rendered login/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:19 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ssIZJmWEk6zEbQ3JPPlYFOAh2fGS1N8lI3I5Mx75LQ=", "email"=>"email@email.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'email@email.com' LIMIT 1[0m
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+Processing by CompromissosController#index as HTML
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-24 22:25:26 -0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-05-24 22:25:30 -0300
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 22:25:30 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
