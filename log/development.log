@@ -1,0 +1,192 @@
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCompromissos (20140609202119)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "compromissos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar(255), "texto" text, "date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140609202119"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 15:54:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CompromissosController#index as HTML
+  [1m[35mCompromisso Load (0.4ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1030ms (Views: 1666.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-24 15:54:51 -0300
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-05-24 15:54:58 -0300
+Processing by CompromissosController#new as HTML
+  Rendered compromissos/_form.html.erb (55.5ms)
+  Rendered compromissos/new.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-05-24 15:55:12 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3ssIZJmWEk6zEbQ3JPPlYFOAh2fGS1N8lI3I5Mx75LQ=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"aula 21", "date(1i)"=>"2016", "date(2i)"=>"5", "date(3i)"=>"24"}, "commit"=>"Create Compromisso"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.9ms)[0m  INSERT INTO "compromissos" ("created_at", "date", "texto", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 24 May 2016 18:55:12 UTC +00:00], ["date", Tue, 24 May 2016], ["texto", "aula 21"], ["titulo", "Aula 1"], ["updated_at", Tue, 24 May 2016 18:55:12 UTC +00:00]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/compromissos/1
+Completed 302 Found in 29ms (ActiveRecord: 24.2ms)
+
+
+Started GET "/compromissos/1" for 127.0.0.1 at 2016-05-24 15:55:13 -0300
+Processing by CompromissosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos" WHERE "compromissos"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered compromissos/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-05-24 15:55:15 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mCompromisso Load (0.5ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  Rendered compromissos/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/compromissos?month=2016-06-01" for 127.0.0.1 at 2016-05-24 15:55:21 -0300
+Processing by CompromissosController#index as HTML
+  Parameters: {"month"=>"2016-06-01"}
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos?month=2016-05-31" for 127.0.0.1 at 2016-05-24 15:55:22 -0300
+Processing by CompromissosController#index as HTML
+  Parameters: {"month"=>"2016-05-31"}
+  [1m[36mCompromisso Load (0.3ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  Rendered compromissos/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 15:58:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CompromissosController#index as HTML
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 174ms (Views: 162.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:29 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:29 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:30 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  Rendered compromissos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-24 15:58:34 -0300
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-05-24 15:58:45 -0300
+Processing by CompromissosController#new as HTML
+  Rendered compromissos/_form.html.erb (30.3ms)
+  Rendered compromissos/new.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 18:00:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CompromissosController#index as HTML
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 189ms (Views: 174.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  Rendered compromissos/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-24 18:00:40 -0300
