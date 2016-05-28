@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <div id="calendar">
 	<h2 id="month">
 		<%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
@@ -10,8 +11,14 @@
 	<%= day.day %>
 	<% compromissos.each do |compromisso| %><br>
 	<%= link_to h(compromisso.titulo), compromisso %><br>
+	<%= compromisso.date.strftime("%H:%M")%>
+	<% @sala = Sala.find(compromisso.sala_id)%>
+	<%= @sala.nome %>
 	<%= link_to 'Editar', edit_compromisso_path(compromisso) %> | <%= link_to 'Deletar', compromisso, method: :delete, data: { confirm: 'Tem certeza?' } %>
 	<% end %>
 	<% end %>
 	<% end %>
 </div>
+<% else %>
+ <!-- redirectionar para login -->
+<% end %>

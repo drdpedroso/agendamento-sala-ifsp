@@ -11,14 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524211016) do
+ActiveRecord::Schema.define(version: 20160526010928) do
 
   create_table "compromissos", force: true do |t|
     t.string   "titulo"
     t.text     "texto"
-    t.date     "date"
+    t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "sala_id"
+  end
+
+  create_table "salas", force: true do |t|
+    t.string   "nome"
+    t.string   "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "compromisso_id"
   end
 
   create_table "users", force: true do |t|

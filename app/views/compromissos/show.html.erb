@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -11,9 +12,10 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Data:</strong>
   <%= @compromisso.date %>
 </p>
 
 <%= link_to 'Edit', edit_compromisso_path(@compromisso) %> |
 <%= link_to 'Back', compromissos_path %>
+<% end %>

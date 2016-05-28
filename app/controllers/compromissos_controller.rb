@@ -16,6 +16,7 @@ class CompromissosController < ApplicationController
   # GET /compromissos/new
   def new
     @compromisso = Compromisso.new
+    @salas = Sala.all
   end
 
   # GET /compromissos/1/edit
@@ -26,16 +27,15 @@ class CompromissosController < ApplicationController
   # POST /compromissos.json
   def create
     @compromisso = Compromisso.new(compromisso_params)
-
-    respond_to do |format|
-      if @compromisso.save
-        format.html { redirect_to @compromisso, notice: 'Compromisso was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @compromisso }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @compromisso.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @compromisso.save
+          format.html { redirect_to @compromisso, notice: 'Agendamento criado com sucesso.' }
+          format.json { render action: 'show', status: :created, location: @compromisso }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @compromisso.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PATCH/PUT /compromissos/1
@@ -43,7 +43,7 @@ class CompromissosController < ApplicationController
   def update
     respond_to do |format|
       if @compromisso.update(compromisso_params)
-        format.html { redirect_to @compromisso, notice: 'Compromisso was successfully updated.' }
+        format.html { redirect_to @compromisso, notice: 'Compromisso editado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -70,6 +70,6 @@ class CompromissosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def compromisso_params
-      params.require(:compromisso).permit(:titulo, :texto, :date)
+      params.require(:compromisso).permit(:titulo, :texto, :date, :sala_id)
     end
 end

@@ -1,5 +1,7 @@
-<h1>Novo compromisso</h1>
+<% if logged_in? %>
+<h1>Novo agendamento</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', compromissos_path %>
+<% end %>

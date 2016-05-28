@@ -1,7 +1,7 @@
 <%= form_for(@compromisso) do |f| %>
   <% if @compromisso.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@compromisso.errors.count, "error") %> prohibited this compromisso from being saved:</h2>
+      <h2><%= pluralize(@compromisso.errors.count, "error") %> prohibited this agendamento from being saved:</h2>
 
       <ul>
       <% @compromisso.errors.full_messages.each do |msg| %>
@@ -21,7 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.datetime_select :date %>
+    <p> as aulas duram 1h, contando a partir do horario selecionado. </p>
+  </div>
+  <div class="field">
+    <%= f.label :sala_id %><br>
+    <%= f.select(:sala_id, options_for_select( Sala.all.collect {|p| [ p.nome, p.id ] })) do %>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>

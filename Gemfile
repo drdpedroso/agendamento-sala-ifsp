@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt'
+gem 'pry'
 
 group :doc do
   gem 'sdoc', require: false
@@ -16,6 +17,7 @@ end
 gem "watu_table_builder", :require => "table_builder"
 group :development, :test do
   gem 'sqlite3'
+    gem 'pry-nav'
 end
 group :production do
   gem 'pg', '0.15.1'
