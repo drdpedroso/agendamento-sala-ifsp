@@ -17,7 +17,8 @@ end
 gem "watu_table_builder", :require => "table_builder"
 group :development, :test do
   gem 'sqlite3'
-    gem 'pry-nav'
+  gem 'railroady'
+  gem 'pry-nav'
 end
 group :production do
   gem 'pg', '0.15.1'
