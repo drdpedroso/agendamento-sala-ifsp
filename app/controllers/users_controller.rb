@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       flash[:danger] = "Erro ao criar usuario"
-      binding.pry
       render :new
     end
   end

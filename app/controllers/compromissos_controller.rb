@@ -29,6 +29,7 @@ class CompromissosController < ApplicationController
     @compromisso = Compromisso.new(compromisso_params)
       respond_to do |format|
         if @compromisso.save
+          UserMailer.new_reservation(@compromisso)
           format.html { redirect_to @compromisso, notice: 'Agendamento criado com sucesso.' }
           format.json { render action: 'show', status: :created, location: @compromisso }
         else

@@ -8687,3 +8687,279 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-05 20:48:18
 
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-05 20:48:18 -0300
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-05 20:55:39 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  Rendered compromissos/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-05 21:03:22 -0300
+Processing by CompromissosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.2ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (60.9ms)
+  Rendered compromissos/new.html.erb within layouts/application (97.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+Completed 200 OK in 207ms (Views: 158.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-06-05 21:03:29 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8bpfAMSDrOBtfxiEflFv+1meYtJaVYOcOlU/yFfrGU=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"desdas", "date(1i)"=>"2016", "date(2i)"=>"6", "date(3i)"=>"6", "date(4i)"=>"00", "date(5i)"=>"03", "sala_id"=>"1"}, "commit"=>"Create Compromisso"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompromisso Exists (0.2ms)[0m  SELECT 1 AS one FROM "compromissos" WHERE ("compromissos"."date" = '2016-06-06 00:03:00.000000' AND "compromissos"."sala_id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "compromissos" ("created_at", "date", "sala_id", "texto", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jun 2016 00:03:29 UTC +00:00], ["date", Mon, 06 Jun 2016 00:03:00 UTC +00:00], ["sala_id", 1], ["texto", "desdas"], ["titulo", "Aula 1"], ["updated_at", Mon, 06 Jun 2016 00:03:29 UTC +00:00]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 547ms
+
+ActionView::MissingTemplate (Missing template user_mailer/new_reservation with "mailer". Searched in:
+  * "user_mailer"
+):
+  app/mailers/user_mailer.rb:6:in `new_reservation'
+  app/controllers/compromissos_controller.rb:32:in `block in create'
+  app/controllers/compromissos_controller.rb:30:in `create'
+
+
+  Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8bpfAMSDrOBtfxiEflFv+1meYtJaVYOcOlU/yFfrGU=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"desdas", "date(1i)"=>"2016", "date(2i)"=>"6", "date(3i)"=>"6", "date(4i)"=>"00", "date(5i)"=>"03", "sala_id"=>"1"}, "commit"=>"Create Compromisso"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompromisso Exists (0.2ms)[0m  SELECT 1 AS one FROM "compromissos" WHERE ("compromissos"."date" = '2016-06-06 00:03:00.000000' AND "compromissos"."sala_id" = 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSala Load (0.2ms)[0m  [1mSELECT "salas".* FROM "salas"[0m
+  Rendered compromissos/_form.html.erb (10.6ms)
+  Rendered compromissos/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:07 -0300
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-06-05 21:04:15 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8bpfAMSDrOBtfxiEflFv+1meYtJaVYOcOlU/yFfrGU=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"desdas", "date(1i)"=>"2016", "date(2i)"=>"6", "date(3i)"=>"13", "date(4i)"=>"00", "date(5i)"=>"03", "sala_id"=>"1"}, "commit"=>"Create Compromisso"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompromisso Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "compromissos" WHERE ("compromissos"."date" = '2016-06-13 00:03:00.000000' AND "compromissos"."sala_id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "compromissos" ("created_at", "date", "sala_id", "texto", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 06 Jun 2016 00:04:15 UTC +00:00], ["date", Mon, 13 Jun 2016 00:03:00 UTC +00:00], ["sala_id", 1], ["texto", "desdas"], ["titulo", "Aula 1"], ["updated_at", Mon, 06 Jun 2016 00:04:15 UTC +00:00]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  Rendered user_mailer/new_reservation.html.erb (0.3ms)
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `deliver_later' for #<Mail::Message:0x007fa719c725f0>):
+  app/controllers/compromissos_controller.rb:32:in `block in create'
+  app/controllers/compromissos_controller.rb:30:in `create'
+
+
+  Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.8ms)
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8bpfAMSDrOBtfxiEflFv+1meYtJaVYOcOlU/yFfrGU=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"desdas", "date(1i)"=>"2016", "date(2i)"=>"6", "date(3i)"=>"13", "date(4i)"=>"00", "date(5i)"=>"03", "sala_id"=>"1"}, "commit"=>"Create Compromisso"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCompromisso Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "compromissos" WHERE ("compromissos"."date" = '2016-06-13 00:03:00.000000' AND "compromissos"."sala_id" = 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.2ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (15.0ms)
+  Rendered compromissos/new.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 35.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:34 -0300
+
+
+Started POST "/compromissos" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+Processing by CompromissosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8bpfAMSDrOBtfxiEflFv+1meYtJaVYOcOlU/yFfrGU=", "compromisso"=>{"titulo"=>"Aula 1", "texto"=>"desdas", "date(1i)"=>"2016", "date(2i)"=>"6", "date(3i)"=>"13", "date(4i)"=>"00", "date(5i)"=>"07", "sala_id"=>"1"}, "commit"=>"Create Compromisso"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCompromisso Exists (0.1ms)[0m  SELECT 1 AS one FROM "compromissos" WHERE ("compromissos"."date" = '2016-06-13 00:07:00.000000' AND "compromissos"."sala_id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "compromissos" ("created_at", "date", "sala_id", "texto", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 06 Jun 2016 00:04:39 UTC +00:00], ["date", Mon, 13 Jun 2016 00:07:00 UTC +00:00], ["sala_id", 1], ["texto", "desdas"], ["titulo", "Aula 1"], ["updated_at", Mon, 06 Jun 2016 00:04:39 UTC +00:00]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  Rendered user_mailer/new_reservation.html.erb (0.1ms)
+Redirected to http://localhost:3000/compromissos/13
+Completed 302 Found in 30ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/compromissos/13" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+Processing by CompromissosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos" WHERE "compromissos"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered compromissos/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-05 21:04:39 -0300
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-05 21:04:44 -0300
+Processing by CompromissosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.2ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (8.4ms)
+  Rendered compromissos/new.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-05 21:04:45 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCompromisso Load (0.1ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  [1m[36mSala Load (0.2ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered compromissos/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.5ms)
