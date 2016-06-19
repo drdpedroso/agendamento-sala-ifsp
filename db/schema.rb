@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619134837) do
+ActiveRecord::Schema.define(version: 20160619141200) do
 
   create_table "compromissos", force: true do |t|
     t.string   "titulo"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160619134837) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sala_id"
+    t.integer  "user_id"
   end
 
   create_table "salas", force: true do |t|

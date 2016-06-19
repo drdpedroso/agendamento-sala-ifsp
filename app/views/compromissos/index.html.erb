@@ -14,7 +14,9 @@
 	<%= compromisso.date.strftime("%H:%M")%>
 	<% @sala = Sala.find(compromisso.sala_id)%>
 	<%= @sala.nome %>
-	<%= link_to 'Editar', edit_compromisso_path(compromisso) %> | <%= link_to 'Deletar', compromisso, method: :delete, data: { confirm: 'Tem certeza?' } %>
+	<% if (compromisso.user == @user || @user.super ) %>
+		<%= link_to 'Editar', edit_compromisso_path(compromisso) %> | <%= link_to 'Deletar', compromisso, method: :delete, data: { confirm: 'Tem certeza?' } %>
+	<% end %>
 	<% end %>
 	<% end %>
 	<% end %>

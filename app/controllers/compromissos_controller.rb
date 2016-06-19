@@ -1,9 +1,9 @@
 class CompromissosController < ApplicationController
   before_action :set_compromisso, only: [:show, :edit, :update, :destroy]
-
   # GET /compromissos
   # GET /compromissos.json
   def index
+    @user = User.find(current_user)
     @compromissos = Compromisso.all
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
   end
@@ -27,6 +27,7 @@ class CompromissosController < ApplicationController
   # POST /compromissos.json
   def create
     @compromisso = Compromisso.new(compromisso_params)
+    @compromisso.user = User.find(current_user)
       respond_to do |format|
         if @compromisso.save
           UserMailer.new_reservation(@compromisso)
@@ -44,7 +45,7 @@ class CompromissosController < ApplicationController
   def update
     respond_to do |format|
       if @compromisso.update(compromisso_params)
-        format.html { redirect_to @compromisso, notice: 'Compromisso editado com sucesso.' }
+        format.html { redirect_to @compromisso, notice: 'Agendamento editado com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
