@@ -11797,3 +11797,266 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 11:25:19 -0300
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 11:25:19 -0300
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-19 18:41:53 -0300
+Processing by CompromissosController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCompromisso Load (0.1ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  [1m[36mSala Load (0.1ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:53 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:53 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:53 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:53 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 18:41:54 -0300
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-19 18:41:55 -0300
+Processing by CompromissosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.2ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (10.2ms)
+  Rendered compromissos/new.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+Processing by CompromissosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.2ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (12.8ms)
+  Rendered compromissos/new.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:13 -0300
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+Processing by CompromissosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSala Load (0.4ms)[0m  SELECT "salas".* FROM "salas"
+  Rendered compromissos/_form.html.erb (8.1ms)
+  Rendered compromissos/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 18:42:44 -0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-06-19 18:42:51 -0300
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-19 18:42:51 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-19 18:42:52 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
