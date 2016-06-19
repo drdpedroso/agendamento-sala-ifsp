@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526010928) do
+ActiveRecord::Schema.define(version: 20160619134837) do
 
   create_table "compromissos", force: true do |t|
     t.string   "titulo"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20160526010928) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "super"
   end
 
 end
