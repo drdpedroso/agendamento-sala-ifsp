@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       flash[:success] = "Usuario criado com sucesso"
-      redirect_to root_path
+      redirect_to compromissos_path
     else
       flash[:danger] = "Erro ao criar usuario"
       render :new

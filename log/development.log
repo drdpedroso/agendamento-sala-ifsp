@@ -12060,3 +12060,544 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-19 18:43:01 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-24 20:00:58 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+Completed 200 OK in 226ms (Views: 223.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-24 20:00:59 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:06:25 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"root@root.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'root@root.com' LIMIT 1[0m
+  Rendered login/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 17.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:06:30 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1
+  Rendered login/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 127ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:06:35 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1[0m
+  Rendered login/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:08:55 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:08:56 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  [1m[35mSala Load (0.1ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (10.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:08:56 -0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-06-24 20:09:01 -0300
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-24 20:09:01 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:09:18 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"teste@teste.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'teste@teste.com' LIMIT 1[0m
+  Rendered login/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:09:18 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:09:24 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"teste@teste.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'teste@teste.com' LIMIT 1
+  Rendered login/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:09:24 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:09:30 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"teste@teste.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'teste@teste.com' LIMIT 1[0m
+  Rendered login/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 12.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:09:30 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:09:43 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1
+  Rendered login/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 89ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:09:43 -0300
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:09:49 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 79ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:09:49 -0300
+Processing by CompromissosController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  [1m[36mSala Load (0.1ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (7.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:09:49 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-24 20:09:53 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-24 20:12:01 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "user"=>{"nome"=>"dadsa", "email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar usuario"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('aaa@aaa.com') LIMIT 1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "nome", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Fri, 24 Jun 2016 23:12:01 UTC +00:00], ["email", "aaa@aaa.com"], ["nome", "dadsa"], ["password_digest", "$2a$10$oNHsVzxiP4x0FBcW1iD4wev2iOPdvna1obJKepaHzRrwmg.5zPB0S"], ["updated_at", Fri, 24 Jun 2016 23:12:01 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('aaa@aaa.com') AND "users"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-24 20:12:01 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:12:01 -0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-06-24 20:12:06 -0300
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-24 20:12:06 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:12:13 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'aaa@aaa.com' LIMIT 1[0m
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+Processing by CompromissosController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCompromisso Load (0.2ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  [1m[36mSala Load (0.1ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (6.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:12:14 -0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-06-24 20:14:46 -0300
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-24 20:14:46 -0300
+Processing by LoginController#new as HTML
+  Rendered login/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "email"=>"drdpedroso@gmail.com", "password"=>"[FILTERED]", "commit"=>"Entrar"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'drdpedroso@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 83ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  [1m[35mSala Load (0.1ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (12.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:14:52 -0300
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+Processing by CompromissosController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCompromisso Load (0.3ms)[0m  [1mSELECT "compromissos".* FROM "compromissos"[0m
+  [1m[35mSala Load (0.1ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (9.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:04 -0300
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-24 20:15:05 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:30 -0300
+
+
+Started POST "/users" for 127.0.0.1 at 2016-06-24 20:15:40 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eH0xH5WXuEkg17wfglLpjmnn7OFzn22sIqTv6sVxRzM=", "user"=>{"nome"=>"dsadsads", "email"=>"dsadasds@dadsas.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar usuario"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('dsadasds@dadsas.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "nome", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Fri, 24 Jun 2016 23:15:40 UTC +00:00], ["email", "dsadasds@dadsas.com"], ["nome", "dsadsads"], ["password_digest", "$2a$10$lxaf4Iz3kdGSd/sCsPVL1eueIAMMlD6sYMDOM5fdJUFavlJ.KtSae"], ["updated_at", Fri, 24 Jun 2016 23:15:40 UTC +00:00]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('dsadasds@dadsas.com') AND "users"."id" != 6) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/compromissos
+Completed 302 Found in 87ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/compromissos" for 127.0.0.1 at 2016-06-24 20:15:40 -0300
+Processing by CompromissosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCompromisso Load (0.4ms)[0m  SELECT "compromissos".* FROM "compromissos"
+  [1m[36mSala Load (0.1ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "salas".* FROM "salas" WHERE "salas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered compromissos/index.html.erb within layouts/application (42.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 103ms (Views: 53.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-24 20:15:41 -0300

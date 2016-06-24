@@ -19,6 +19,12 @@
         <li><%= link_to 'Novo agendamento', new_compromisso_path %></li>
         <!-- <li><a href="#">Meus agendamentos</a></li> -->
       </ul>
+      <% if User.find(current_user).super %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Cadastrar',new_user_path %></li>
+          <!-- <li><a href="#">Meus agendamentos</a></li> -->
+        </ul>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Logout",logout_path %></li>
 
