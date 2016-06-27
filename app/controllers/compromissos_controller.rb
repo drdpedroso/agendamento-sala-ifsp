@@ -27,6 +27,7 @@ class CompromissosController < ApplicationController
   # POST /compromissos.json
   def create
     @compromisso = Compromisso.new(compromisso_params)
+    @compromisso.date = Date.today
     @compromisso.user = User.find(current_user)
       respond_to do |format|
         if @compromisso.save
@@ -72,6 +73,6 @@ class CompromissosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def compromisso_params
-      params.require(:compromisso).permit(:titulo, :texto, :date, :sala_id)
+      params.require(:compromisso).permit(:titulo, :texto, :start_date, :end_date, :sala_id)
     end
 end

@@ -11,7 +11,8 @@
 	<%= day.day %>
 	<% compromissos.each do |compromisso| %><br>
 	<%= link_to h(compromisso.titulo), compromisso %><br>
-	<%= compromisso.date.strftime("%H:%M")%>
+	<%= compromisso.start_date.strftime("%H:%M")%><br>
+	<%= compromisso.end_date.strftime("%H:%M")%>
 	<% @sala = Sala.find(compromisso.sala_id)%>
 	<%= @sala.nome %>
 	<% if (compromisso.user == @user || @user.super ) %>

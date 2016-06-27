@@ -2,18 +2,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Titulo:</strong>
+  <strong>Evento:</strong>
   <%= @compromisso.titulo %>
 </p>
 
 <p>
-  <strong>Texto:</strong>
+  <strong>Descrição:</strong>
   <%= @compromisso.texto %>
 </p>
 
 <p>
-  <strong>Data:</strong>
-  <%= @compromisso.date %>
+  <strong>Inicio:</strong>
+  <%= @compromisso.start_date %>
+</p>
+
+<p>
+  <strong>Final:</strong>
+  <%= @compromisso.end_date %>
 </p>
 
 <%= link_to 'Edit', edit_compromisso_path(@compromisso) %> |
