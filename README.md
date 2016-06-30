@@ -34,4 +34,10 @@ Subindo o Servidor local:
 
 
 
+# Documentaçao/Diagramas:
+
+    doc/
+
+
+
 Duvidas? drdpedroso@gmail.com
