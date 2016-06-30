@@ -5,6 +5,7 @@
 		<%=h @date.strftime("%B %Y") %>
 		<%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %>
 	</h2>
+	<!-- Monta o calendario -->
 	<%= calendar_for @compromissos, :year => @date.year, :month => @date.month do |t| %>
 	<%= t.head('DOM','SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB') %>
 	<%= t.day do |day, compromissos| %>
@@ -16,12 +17,10 @@
 	<% @sala = Sala.find(compromisso.sala_id)%>
 	<%= @sala.nome %>
 	<% if (compromisso.user == @user || @user.super ) %>
-		<%= link_to 'Editar', edit_compromisso_path(compromisso) %> | <%= link_to 'Deletar', compromisso, method: :delete, data: { confirm: 'Tem certeza?' } %>
+		<%= link_to 'Editar', edit_compromisso_path(compromisso) %> | <%= link_to 'Cancelar', compromisso, method: :delete, data: { confirm: 'Tem certeza?' } %>
 	<% end %>
 	<% end %>
 	<% end %>
 	<% end %>
 </div>
-<% else %>
- <!-- redirectionar para login -->
 <% end %>

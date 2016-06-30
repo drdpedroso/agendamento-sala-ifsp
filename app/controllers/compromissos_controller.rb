@@ -27,8 +27,8 @@ class CompromissosController < ApplicationController
   # POST /compromissos.json
   def create
     @compromisso = Compromisso.new(compromisso_params)
-    @compromisso.date = Date.today
-    @compromisso.user = User.find(current_user)
+    @compromisso.date = Date.today   # Atribui a data de hoje ao compromisso (usado apenas para controle no banco)
+    @compromisso.user = User.find(current_user)  # Atribui o usuario da sessao ao usuario que criou o agendamento
       respond_to do |format|
         if @compromisso.save
           UserMailer.new_reservation(@compromisso)
@@ -66,12 +66,12 @@ class CompromissosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Compartilha callbacks 
     def set_compromisso
       @compromisso = Compromisso.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Controla os parametros autorizados (nunca confie na internet)
     def compromisso_params
       params.require(:compromisso).permit(:titulo, :texto, :start_date, :end_date, :sala_id)
     end

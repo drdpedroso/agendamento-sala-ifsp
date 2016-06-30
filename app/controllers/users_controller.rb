@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  #Cria novos usuarios
   def create
     @user = User.create(user_params)
     if @user.save
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
 
   private
 
+    # Libera parametros do usuario para cadastro
     def user_params
       params.require(:user).permit!
     end

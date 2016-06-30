@@ -13950,3 +13950,7 @@ NameError (undefined local variable or method `siblings' for #<Compromisso:0x007
   Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
   Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
   Rendered /Users/eduardopedroso/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.9ms)
+  [1m[36mCompromisso Load (0.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos" ORDER BY "compromissos"."id" DESC LIMIT 1[0m
+  [1m[35mCompromisso Load (0.3ms)[0m  SELECT "compromissos".* FROM "compromissos" ORDER BY "compromissos"."id" DESC LIMIT 1
+  [1m[36mCompromisso Load (2.2ms)[0m  [1mSELECT "compromissos".* FROM "compromissos" ORDER BY "compromissos"."id" DESC LIMIT 1[0m
+  [1m[35mCompromisso Load (0.3ms)[0m  SELECT "compromissos".* FROM "compromissos" ORDER BY "compromissos"."id" DESC LIMIT 1
