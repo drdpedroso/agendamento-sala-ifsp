@@ -14191,3 +14191,63 @@ Processing by CompromissosController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
   Rendered layouts/_header.html.erb (1.2ms)
 Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/compromissos/new" for 127.0.0.1 at 2016-06-30 21:05:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CompromissosController#new as HTML
+  [1m[35mUser Load (13.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSala Load (0.5ms)[0m  [1mSELECT "salas".* FROM "salas"[0m
+  Rendered compromissos/_form.html.erb (242.1ms)
+  Rendered compromissos/new.html.erb within layouts/application (330.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 1084ms (Views: 946.6ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:22 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:22 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:22 -0300
+
+
+Started GET "/assets/salas.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:22 -0300
+
+
+Started GET "/assets/calendar.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:22 -0300
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/salas.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-30 21:05:23 -0300
