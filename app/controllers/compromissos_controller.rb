@@ -27,18 +27,24 @@ class CompromissosController < ApplicationController
   # POST /compromissos.json
   def create
     @compromisso = Compromisso.new(compromisso_params)
-    @compromisso.date = Date.today   # Atribui a data de hoje ao compromisso (usado apenas para controle no banco)
-    @compromisso.user = User.find(current_user)  # Atribui o usuario da sessao ao usuario que criou o agendamento
-      respond_to do |format|
-        if @compromisso.save
-          UserMailer.new_reservation(@compromisso)
-          format.html { redirect_to @compromisso, notice: 'Agendamento criado com sucesso.' }
-          format.json { render action: 'show', status: :created, location: @compromisso }
-        else
-          format.html { render action: 'new' }
-          format.json { render json: @compromisso.errors, status: :unprocessable_entity }
+    # Verifica se existe algo agendado nessa data
+    isAnyDate = Compromisso.where("(start_date <= ?) AND (end_date >= ?) AND (sala_id == ?)", @compromisso.start_date, @compromisso.end_date, @compromisso.sala_id)
+    if(isAnyDate.length > 0)
+      redirect_to new_compromisso_path, notice: 'Data ja existe.'
+    else
+      @compromisso.date = Date.today   # Atribui a data de hoje ao compromisso (usado apenas para controle no banco)
+      @compromisso.user = User.find(current_user)  # Atribui o usuario da sessao ao usuario que criou o agendamento
+        respond_to do |format|
+          if @compromisso.save
+            UserMailer.new_reservation(@compromisso)
+            format.html { redirect_to @compromisso, notice: 'Agendamento criado com sucesso.' }
+            format.json { render action: 'show', status: :created, location: @compromisso }
+          else
+            format.html { render action: 'new' }
+            format.json { render json: @compromisso.errors, status: :unprocessable_entity }
+          end
         end
-      end
+    end
   end
 
   # PATCH/PUT /compromissos/1
@@ -66,7 +72,7 @@ class CompromissosController < ApplicationController
   end
 
   private
-    # Compartilha callbacks 
+    # Compartilha callbacks
     def set_compromisso
       @compromisso = Compromisso.find(params[:id])
     end
