@@ -1,0 +1,16 @@
+<div class="container">
+  <%= form_tag '/login' do %>
+
+  <form class="form-signin">
+    <label for="inputEmail" class="sr-only">Email</label>
+    <p><%= text_field_tag :email, "", class: 'form-control', placeholder: "Email" %></p>
+
+    <label for="inputPassword" class="sr-only">Senha</label>
+    <p><%= password_field_tag :password, "", class: 'form-control', placeholder: "Senha" %></p>
+
+    <%= submit_tag 'Entrar', class: "btn btn-lg btn-primary btn-block" %>
+
+    <% end %>
+  </form>
+
+</div> <!-- /container -->

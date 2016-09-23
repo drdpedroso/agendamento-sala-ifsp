@@ -1,0 +1,26 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Evento:</strong>
+  <%= @compromisso.titulo %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @compromisso.texto %>
+</p>
+
+<p>
+  <strong>Inicio:</strong>
+  <%= @compromisso.start_date %>
+</p>
+
+<p>
+  <strong>Final:</strong>
+  <%= @compromisso.end_date %>
+</p>
+
+<%= link_to 'Editar', edit_compromisso_path(@compromisso) %> |
+<%= link_to 'Voltar', compromissos_path %>
+<% end %>

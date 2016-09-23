@@ -1,0 +1,8 @@
+<% if logged_in? %>
+<h1>Editar agendamento</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Mostrar', @compromisso %> |
+<%= link_to 'Voltar', compromissos_path %>
+<% end %>

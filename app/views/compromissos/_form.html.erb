@@ -1,0 +1,39 @@
+<%= form_for(@compromisso) do |f| %>
+  <% if @compromisso.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@compromisso.errors.count, "error") %> prohibited this agendamento from being saved:</h2>
+
+      <ul>
+      <% @compromisso.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!-- Formulario para criaçao/ediçao -->
+  <div class="field">
+    <%= f.label 'Evento' %><br>
+    <%= f.text_field :titulo, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Descrição' %><br>
+    <%= f.text_area :texto, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Data Inicio' %><br>
+    <%= f.datetime_select :start_date, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Data Final' %><br>
+    <%= f.datetime_select :end_date, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :sala_id %><br>
+    <%= f.select(:sala_id, options_for_select( Sala.all.collect {|p| [ p.nome, p.id ] })) do %>
+    <% end %>
+  </div>
+  <div class="actions btn-block btn">
+    <%= f.submit 'Criar agendamento', class: 'btn btn-block'%>
+  </div>
+<% end %>
